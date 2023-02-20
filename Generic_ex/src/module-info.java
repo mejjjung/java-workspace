@@ -1,0 +1,2 @@
+module Generic_ex {
+}
