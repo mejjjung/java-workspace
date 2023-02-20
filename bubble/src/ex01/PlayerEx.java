@@ -10,9 +10,16 @@ public class PlayerEx extends JLabel implements MoveableEx {
 	private ImageIcon playerR, playerL;
 	
 	public PlayerEx() {
-		playerR = new ImageIcon("images/playerR.png");
-		playerL = new ImageIcon("images/playerL.png");
+		initData();
+		setInitLayout();
 	}
+	
+	
+	private void initData() {
+		playerR = new ImageIcon("images/playerR.png");
+		playerL = new ImageIcon("images/playerL.png");		
+	}
+	
 	
 	private void setInitLayout() {
 		x = 55;
@@ -25,19 +32,22 @@ public class PlayerEx extends JLabel implements MoveableEx {
 	@Override
 	public void left() {
 		setIcon(playerL);
-		
+		x -= 10;
+		setLocation(x, y);
 		
 	}
 
 	@Override
 	public void right() {
-		// TODO Auto-generated method stub
+		setIcon(playerR);
+		x += 10;
+		setLocation(x, y);
 		
 	}
 
 	@Override
 	public void up() {
-		// TODO Auto-generated method stub
+		System.out.println("점프!!");
 		
 	}
 
