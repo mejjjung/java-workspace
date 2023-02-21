@@ -9,6 +9,17 @@ public class PlayerEx extends JLabel implements MoveableEx {
 	private int y;
 	private ImageIcon playerR, playerL;
 	
+	private boolean left;
+	private boolean right;
+	private boolean up;
+	private boolean down;
+	
+	private final int SPEED = 4;
+	private final int JUMPSPEED = 2;
+	
+	
+	
+	
 	public PlayerEx() {
 		initData();
 		setInitLayout();

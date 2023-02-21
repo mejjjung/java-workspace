@@ -46,6 +46,7 @@ public class BubbleFrameEx extends JFrame {
 					break;
 				case KeyEvent.VK_RIGHT:
 					player.right();
+					break;
 				case KeyEvent.VK_UP:
 					player.up();
 					break;
@@ -54,10 +55,24 @@ public class BubbleFrameEx extends JFrame {
 					break;
 				}
 			}
+			
+			@Override
+			public void keyReleased(KeyEvent e) {
+				switch (e.getKeyCode()) {
+				case KeyEvent.VK_LEFT:
+					break;
+
+				default:
+					break;
+				}
+			}
+			
+			
+			
 		});
 	}
 	
 	public static void main(String[] args) {
 		new BubbleFrame();
-	}
+	} // end of main
 }
