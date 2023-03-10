@@ -9,6 +9,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import ex09.Enemy;
+
 // ** main 가지는 클래스는 프로그램에 사용하는 참조 변수를 다 알 수 있다. **
 public class BubbleFrame extends JFrame {
 
@@ -16,6 +18,7 @@ public class BubbleFrame extends JFrame {
 	private BubbleFrame mContext = this; // this 주소값을 mContextm에 담아 둔다.
 	private JLabel backgroundMap;
 	private Player player;
+	private Enemy enemy;
 
 	public BubbleFrame() {
 		initData();
@@ -35,6 +38,8 @@ public class BubbleFrame extends JFrame {
 
 		// 1 . 부모에 주소값을 자식 객체한테 던져 주면 된다.
 		player = new Player(mContext);
+		
+		enemy = new Enemy();
 	}
 
 	private void setInitLayout() {
@@ -44,6 +49,7 @@ public class BubbleFrame extends JFrame {
 		setVisible(true);
 
 		add(player);
+		add(enemy);
 	}
 
 	private void addEventListener() {
